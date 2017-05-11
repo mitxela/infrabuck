@@ -1,0 +1,40 @@
+
+#include "ide.h"
+
+ID_ICON1 ICON  "mx.ico"
+
+IDR_MAINMENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",               ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "Save &As...",                ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",              ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Select A&ll\tCtrl+A",        ID_SELECTALL
+    END
+    POPUP "&Compile"
+    BEGIN
+        MENUITEM "&Run\tF5",                   ID_COMPILE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Abo&ut",                     ID_ABOUT
+    END
+END
+
+
+IDR_ACCEL1 ACCELERATORS
+BEGIN
+  0x4E,   ID_FILE_NEW,  VIRTKEY, CONTROL    // ctrl-N
+  0x4F,   ID_FILE_OPEN, VIRTKEY, CONTROL    // ctrl-O
+  0x53,   ID_FILE_SAVE, VIRTKEY, CONTROL    // ctrl-S
+  0x41,   ID_SELECTALL, VIRTKEY, CONTROL    // ctrl-A
+  0x74,   ID_COMPILE,   VIRTKEY             // F5
+
+END
